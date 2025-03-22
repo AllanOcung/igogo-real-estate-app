@@ -6,5 +6,5 @@ property_router = DefaultRouter()
 property_router.register(r'properties', PropertyViewSet)
 
 urlpatterns = [
-     path('api/', include(property_router.urls)),
+     path('', include(property_router.urls)),
 ]

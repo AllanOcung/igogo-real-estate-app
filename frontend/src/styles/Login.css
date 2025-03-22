@@ -1,0 +1,159 @@
+/* Background Styling */
+body {
+     background: url('/background.jpg') no-repeat center center/cover;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 0;
+}
+ 
+ /* Dark Overlay Box */
+ .login-box {
+     background: rgba(0, 0, 0, 0.7);
+     padding: 2rem;
+     border-radius: 10px;
+     text-align: center;
+     color: white;
+     width: 350px;
+ }
+ 
+ .logo-container {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;   
+     margin-bottom: 40px;  
+ }
+
+ .logo-container .title {
+     margin-left: 10px;
+ }
+
+ .title .igogo {
+     font-size: 20px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+}
+
+.title .igogo span {
+     font-weight: bold;
+     margin-right: 4px;
+}
+
+.title .description {
+     font-size: 13px;
+}
+
+ .logo-container .logo-div {
+     display: flex;
+     
+ }
+ /* Logo */
+ .logo-container .logo {
+     width: 70px;
+     height: auto;
+     border-radius: 50px;
+ }
+ 
+ /* Input Fields */
+ 
+ .input-group {
+     display: flex;
+     flex-direction: column;
+     margin: 10px 0;
+ }
+ 
+ .input-group label {
+     font-size: 16px;
+     text-align: left;
+ }
+ 
+ .input-group input {
+     background-color: antiquewhite;
+     color: black;
+     padding: 10px;
+     border-radius: 5px;
+     border: none;
+     font-size: 16px;
+ }
+ 
+ /* Password Input */
+ .password-wrapper {
+     position: relative;
+     display: flex;
+     align-items: center;
+ }
+ 
+ .password-wrapper input {
+     flex: 1;
+ }
+ 
+ .eye-icon {
+     position: absolute;
+     right: 10px;
+     cursor: pointer;
+ }
+ 
+ /* Button */
+
+ .login-and-forgot-password {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+ }
+ .login-btn {
+     background: #3164d1;
+     color: white;
+     font-size: 18px;
+     padding: 8px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     width: 30%;
+     margin-top: 10px;
+ }
+ 
+ .login-btn:hover {
+     background: #264ba8;
+ }
+ 
+ /* Links */
+ .forgot-password {
+     margin: 10px 0;
+     font-size: 14px;
+     color: white;
+     text-decoration: none;
+ }
+ .forgot-password:hover {
+     text-decoration: underline;
+ }
+ 
+ .divider {
+     height: 1.5px;
+     background-color: gray;
+     width: 100%;
+     margin: 20px 0;
+ }
+ .back-link {
+     color: white;
+     text-decoration: none;
+     font-size: 14px;
+ }
+ 
+ .back-link:hover  {
+     text-decoration: underline;
+ }
+
+ .error-message {
+     color: rgb(243, 5, 5);
+     font-size: 14px;
+     font-weight: bold;
+     margin-top: 10px;
+     background-color: rgb(248, 194, 194);
+     padding: 10px;
+     border-radius: 5px;
+ }
+ 

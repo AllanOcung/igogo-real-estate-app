@@ -43,8 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'listings',
+    'users',
     
     'rest_framework',
+    'rest_framework_simplejwt',
     'corsheaders',
     'pymysql',
 ]
@@ -65,6 +67,30 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# Configure Django REST Framework Authentication
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+        "rest_framework.authentication.SessionAuthentication",  # For Django admin login
+    ),
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.AllowAny",  # Allow login access
+    ),
+}
+# JWT Token Settings (Optional)
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),  # Token expires in 1 day
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),  # Refresh token lasts 7 days
+    'AUTH_HEADER_TYPES': ('Bearer',),  # Expect tokens in "Authorization: Bearer <token>"
+}
+
+
+AUTH_USER_MODEL = 'users.CustomUser' # Tell Django to use the new model for authentication
+
 
 ROOT_URLCONF = 'backend.urls'
 
